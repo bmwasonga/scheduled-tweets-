@@ -13,8 +13,10 @@ Rails.application.routes.draw do
   get "password", to: "passwords#edit"
   patch "password", to: "passwords#update"
 
-  get "password/reset", to: "password_resets#new"
+  get "password/reset", to: "password_resets#new", as: :password_reset
   post "password/reset", to: "password_resets#create"
+  get "password/reset/edit", to: "password_resets#edit"
+  patch "password/reset/edit", to: "password_resets#update"
 
   #get / root is the ruby equivalent of the index.html file
   root to: "main#index"
