@@ -1,4 +1,5 @@
 class User < ApplicationRecord
+  has_many :twitter_accounts
   # this is a ruby method.
   # uses the password digest column in the DB to add a password and a password conformation to the user model
   has_secure_password
