@@ -20,6 +20,8 @@ Rails.application.routes.draw do
 
   get "/auth/twitter/callback", to: "omniauth_callbacks#twitter"
 
+  resources :twitter_accounts
+
   #get / root is the ruby equivalent of the index.html file
   root to: "main#index"
 end
